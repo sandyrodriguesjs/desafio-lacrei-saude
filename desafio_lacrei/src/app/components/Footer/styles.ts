@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-/* FOOTER BACKGROUND */
+
 export const Container = styled.footer`
   width: 100%;
   background: #ffffff;
   border-top: 1px solid #e0e0e0;
 `;
 
-/* WRAPPER INTERNO */
+
 export const Content = styled.div`
   max-width: 1440px;
   margin: 0 auto;
@@ -21,7 +21,7 @@ export const Content = styled.div`
   }
 `;
 
-/* LINHA SUPERIOR — DESKTOP */
+
 export const TopRow = styled.div`
   display: flex;
   align-items: center;
@@ -34,7 +34,7 @@ export const TopRow = styled.div`
   }
 `;
 
-/* LINKS */
+
 export const Links = styled.nav`
   display: flex;
   gap: 32px;
@@ -51,7 +51,7 @@ export const Links = styled.nav`
   }
 `;
 
-/* ESTILO BASE BOTÃO */
+
 const BaseBackToTop = styled.button`
   width: 48px;
   height: 48px;
@@ -70,14 +70,14 @@ const BaseBackToTop = styled.button`
   }
 `;
 
-/* BOTÃO DESKTOP */
+
 export const BackToTopDesktop = styled(BaseBackToTop)`
   @media (max-width: 768px) {
     display: none;
   }
 `;
 
-/* BOTÃO MOBILE */
+
 export const BackToTopMobile = styled(BaseBackToTop)`
   display: none;
 
@@ -86,7 +86,7 @@ export const BackToTopMobile = styled(BaseBackToTop)`
   }
 `;
 
-/* LINHA ÍCONES + CNPJ DESKTOP */
+
 export const SocialRow = styled.div`
   width: 100%;
   display: flex;
@@ -114,7 +114,7 @@ export const SocialButton = styled.a`
   justify-content: center;
 `;
 
-/* CNPJ — DESKTOP APENAS QUANDO ESTÁ EM SocialRow */
+
 export const LegalText = styled.p`
   font-size: 14px;
   color: #2d2d2d;
@@ -129,7 +129,7 @@ export const LegalText = styled.p`
   }
 `;
 
-/* MOBILE: CNPJ + BOTÃO */
+
 export const SocialAndCnpjRow = styled.div`
   width: 100%;
   display: none;
@@ -141,7 +141,7 @@ export const SocialAndCnpjRow = styled.div`
   }
 `;
 
-/* DIVISÓRIA FINAL */
+
 export const Divider = styled.div`
   width: 100%;
   height: 1px;

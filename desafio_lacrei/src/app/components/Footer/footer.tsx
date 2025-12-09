@@ -26,7 +26,6 @@ export function Footer() {
     <Container>
       <Content>
 
-        {/* LINHA SUPERIOR — DESKTOP */}
         <TopRow>
           <Image
             src="/LogoFooter.svg"
@@ -42,13 +41,11 @@ export function Footer() {
             <a href="#">Termos de Uso</a>
           </Links>
 
-          {/* DESKTOP: botão no topo */}
           <BackToTopDesktop onClick={handleScrollTop}>
             <ChevronUp size={24} color="#018762" />
           </BackToTopDesktop>
         </TopRow>
 
-        {/* LINHA DOS ÍCONES + CNPJ (DESKTOP APENAS) */}
         <SocialRow>
           <SocialIcons>
             <SocialButton><Facebook size={24} color="#018762" /></SocialButton>
@@ -57,13 +54,11 @@ export function Footer() {
             <SocialButton><Mail size={24} color="#018762" /></SocialButton>
           </SocialIcons>
 
-          {/* CNPJ (somente DESKTOP) */}
           <LegalText className="desktop-only">
             CNPJ: 51.265.351/0001-65
           </LegalText>
         </SocialRow>
 
-        {/* MOBILE: CNPJ + botão topo */}
         <SocialAndCnpjRow>
           <LegalText>CNPJ: 51.265.351/0001-65</LegalText>
 

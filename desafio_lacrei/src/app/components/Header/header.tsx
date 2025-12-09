@@ -20,7 +20,7 @@ export function Header() {
     <Container>
       <Content>
         
-        {/* LOGO */}
+        
         <LogoArea>
           <Image
             src="/LogoHeader.svg"
@@ -30,7 +30,6 @@ export function Header() {
           />
         </LogoArea>
 
-        {/* DESKTOP NAV */}
         <NavGroup>
           <ButtonBase>Quem somos</ButtonBase>
           <ButtonBase>Ajuda</ButtonBase>
@@ -39,7 +38,6 @@ export function Header() {
           </ButtonPrimary>
         </NavGroup>
 
-        {/* MOBILE ONLY */}
         <MobileButtons>
           <HelpButton aria-label="ajuda">
             <HelpCircle size={24} />
