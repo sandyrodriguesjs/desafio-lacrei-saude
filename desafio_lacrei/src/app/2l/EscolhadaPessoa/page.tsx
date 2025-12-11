@@ -26,8 +26,8 @@ export default function EscolhaDaPessoaPage() {
           </Description>
 
           <ButtonsRow>
-            <Button variant="solid">Buscar atendimento</Button>
-            <Button variant="outline">Oferecer atendimento</Button>
+            <Button variant="solid" aria-label="Ir para a página de buscar atendimento - opção para pacientes">Buscar atendimento</Button>
+            <Button variant="outline" aria-label="Ir para a página de buscar atendimento - opção para profissionais">Oferecer atendimento</Button>
           </ButtonsRow>
         </MainContainer>
 

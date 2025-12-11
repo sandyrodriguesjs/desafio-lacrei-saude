@@ -14,7 +14,6 @@ export default function QuemSomosPage() {
     return (
         <Wrapper>
             <Content>
-
                 <TextBlock>
                     <Title>Atendimento qualificado,<br />seguro e inclusivo</Title>
 
@@ -46,7 +45,6 @@ export default function QuemSomosPage() {
                         style={{ width: "100%", height: "auto", borderRadius: "16px" }}
                     />
                 </ImageBlock>
-
             </Content>
         </Wrapper>
     );

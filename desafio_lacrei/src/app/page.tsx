@@ -26,10 +26,14 @@ export default function Home() {
 
         <ButtonsRow>
           <Link href="/2l/EscolhaDaPessoa" passHref>
-            <Button variant="solid">Para pacientes</Button>
+            <Button variant="solid" aria-label="Ir para a página de escolha — opção para pacientes">
+              Para pacientes
+            </Button>
           </Link>
           <Link href="/2l/EscolhaDaPessoa" passHref>
-            <Button variant="solid">Para profissionais</Button>
+            <Button variant="solid" aria-label="Ir para a página de escolha — opção para profissionais">
+              Para profissionais
+            </Button>
           </Link>
         </ButtonsRow>
       </MainContainer>
