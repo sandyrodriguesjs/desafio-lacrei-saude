@@ -7,9 +7,8 @@ import {
   Title,
   Description,
   ButtonsRow,
-  SolidButton,
-  OutlineButton
 } from "./styles";
+import Button from "@components/Button/Button";
 
 export default function EscolhaDaPessoaPage() {
   return (
@@ -27,8 +26,8 @@ export default function EscolhaDaPessoaPage() {
           </Description>
 
           <ButtonsRow>
-            <SolidButton>Buscar atendimento</SolidButton>
-            <OutlineButton>Oferecer atendimento</OutlineButton>
+            <Button variant="solid">Buscar atendimento</Button>
+            <Button variant="outline">Oferecer atendimento</Button>
           </ButtonsRow>
         </MainContainer>
 

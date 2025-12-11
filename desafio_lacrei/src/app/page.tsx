@@ -6,27 +6,31 @@ import {
   Title,
   Description,
   ButtonsRow,
-  SolidButton
 } from "./styles";
+import Link from "next/link";
+import Button from "@components/Button/Button";
 
 export default function Home() {
   return (
     <BackgroundWrapper>
       <MainContainer>
         <Title>
-          Olá, você está na <br />
-          <span>Lacrei Saúde!</span>
+          Olá, você está <br />
+          na Lacrei Saúde!
         </Title>
 
         <Description>
-          Conectamos pessoas <strong>LGBTQIAPN+</strong> com profissionais da
-          saúde qualificados, proporcionando experiências de cuidado seguras e
-          inclusivas.
+          Conectamos pessoas <strong>LGBTQIAPN+</strong><br />
+          com profissionais de saúde qualificados, proporcionando experiências de cuidado seguras e inclusivas.
         </Description>
 
         <ButtonsRow>
-          <SolidButton>Para pacientes</SolidButton>
-          <SolidButton>Para profissionais</SolidButton>
+          <Link href="/2l/EscolhaDaPessoa" passHref>
+            <Button variant="solid">Para pacientes</Button>
+          </Link>
+          <Link href="/2l/EscolhaDaPessoa" passHref>
+            <Button variant="solid">Para profissionais</Button>
+          </Link>
         </ButtonsRow>
       </MainContainer>
     </BackgroundWrapper>
