@@ -9,6 +9,7 @@ import {
   ButtonsRow,
 } from "./styles";
 import Button from "@components/Button/Button";
+import Link from "next/link";
 
 export default function EscolhaDaPessoaPage() {
   return (
@@ -26,8 +27,12 @@ export default function EscolhaDaPessoaPage() {
           </Description>
 
           <ButtonsRow>
-            <Button variant="solid" aria-label="Ir para a página de buscar atendimento - opção para pacientes">Buscar atendimento</Button>
-            <Button variant="outline" aria-label="Ir para a página de buscar atendimento - opção para profissionais">Oferecer atendimento</Button>
+            <Link href="https://paciente.lacreisaude.com.br" passHref>
+              <Button variant="solid" aria-label="Ir para a página de buscar atendimento - opção para pacientes">Buscar atendimento</Button>
+            </Link>
+            <Link href="https://paciente.lacreisaude.com.br" passHref>
+              <Button variant="outline" aria-label="Ir para a página de buscar atendimento - opção para profissionais">Oferecer atendimento</Button>
+            </Link>
           </ButtonsRow>
         </MainContainer>
 
