@@ -79,14 +79,24 @@ Foram aplicados atributos ARIA quando necessário para melhorar navegação e en
 ### Versão Desktop
 
 * **Página Inicial (Home)** com hero, texto e botões de navegação.
+<img src="./public/PaginaLacrei.png" width="200" alt="Home"/>
+
 * **Página Escolha da Pessoa** com layout de texto + imagem ao lado.
+<img src="./public/PaginaEscolhadaPessoa.png" width="200" alt="Escolha da Pessoa"/>
+
 * **Página Quem Somos** com texto institucional + imagem em destaque.
+<img src="./public/PaginaQuemSomos.png" width="200" alt="Quem Somos"/>
 
 ### Versão Mobile
 
 * Header com botões reduzidos para ícones.
+<img src="./public/PaginaLacreiMobile.png" width="200" alt="Home Mobile"/>
+
 * Layout das páginas ajustado para empilhamento e alinhamento central.
+<img src="./public/PaginaEscolhadaPessoaMobile.png" width="200" alt="Escolha da Pessoa"/>
+
 * Footer adaptado com botão “voltar ao topo” e CNPJ na linha correta.
+<img src="./public/FooterMobile" width="200" alt="Footer Mobile"/>
 
 ---
 
