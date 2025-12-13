@@ -79,24 +79,24 @@ Foram aplicados atributos ARIA quando necessário para melhorar navegação e en
 ### Versão Desktop
 
 * **Página Inicial (Home)** com hero, texto e botões de navegação.
-<img src="./public/PaginaLacrei.png" width="300" alt="Home"/>
+<img src="./public/PaginaLacrei.png" width="400" alt="Home"/>
 
 * **Página Escolha da Pessoa** com layout de texto + imagem ao lado.
-<img src="./public/PaginaEscolhadaPessoa.png" width="300" alt="Escolha da Pessoa"/>
+<img src="./public/PaginaEscolhadaPessoa.png" width="400" alt="Escolha da Pessoa"/>
 
 * **Página Quem Somos** com texto institucional + imagem em destaque.
-<img src="./public/PaginaQuemSomos.png" width="300" alt="Quem Somos"/>
+<img src="./public/PaginaQuemSomos.png" width="400" alt="Quem Somos"/>
 
 ### Versão Mobile
 
 * Header com botões reduzidos para ícones.
-<img src="./public/PaginaLacreiMobile.png" width="100" alt="Home Mobile"/>
+<img src="./public/PaginaLacreiMobile.png" width="200" alt="Home Mobile"/>
 
 * Layout das páginas ajustado para empilhamento e alinhamento central.
-<img src="./public/PaginaEscolhadaPessoaMobile.png" width="100" alt="Escolha da Pessoa"/>
+<img src="./public/PaginaEscolhadaPessoaMobile.png" width="200" alt="Escolha da Pessoa"/>
 
 * Footer adaptado com botão “voltar ao topo” e CNPJ na linha correta.
-<img src="./public/FooterMobile.png" width="100" alt="Footer Mobile"/>
+<img src="./public/FooterMobile.png" width="200" alt="Footer Mobile"/>
 
 ---
 
@@ -105,13 +105,13 @@ Foram aplicados atributos ARIA quando necessário para melhorar navegação e en
 ### Análise no Lighthouse
 
 * **Página Inicial (Home)** 
-<img src="./public/PerfomaceHome.png" width="300" alt="Home"/>
+<img src="./public/PerfomaceHome.png" width="400" alt="Home"/>
 
 * **Página Escolha da Pessoa** 
-<img src="./public/PerformaceEscolhadaPessoa.png" width="300" alt="Escolha da Pessoa"/>
+<img src="./public/PerformaceEscolhadaPessoa.png" width="400" alt="Escolha da Pessoa"/>
 
 * **Página Quem Somos** 
-<img src="./public/PerformaceQuemSomos.png" width="300" alt="Quem Somos"/>
+<img src="./public/PerformaceQuemSomos.png" width="400" alt="Quem Somos"/>
 
 ---
 
@@ -121,27 +121,25 @@ Foram aplicados atributos ARIA quando necessário para melhorar navegação e en
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <URL_DO_REPOSITORIO>
+    git clone https://github.com/sandyrodriguesjs/desafio-lacrei-saude.git
     ```
 2.  **Instale as dependências:**
     ```bash
     npm install
     ```
 
-### Inicie o Servidor
+3.  **Inicie o servidor:**
 
-Para iniciar o servidor de desenvolvimento:
+    Para iniciar o servidor de desenvolvimento:
 
-```bash
-npm run dev
-```
+    ```bash
+    npm run dev
+    ```
+4.  **Acesse o projeto em:**
 
-
-### Acesse o projeto em:
-
-```bash
-http://localhost:3000
-```
+    ```bash
+    http://localhost:3000
+    ```
 
 ---
 
