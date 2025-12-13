@@ -147,7 +147,7 @@ Foram aplicados atributos ARIA quando necessário para melhorar navegação e en
 Para executar os testes unitários e verificar a cobertura:
 
 ```bash
-npm run test
+npm test
 ```
 ---
 
