@@ -1,9 +1,21 @@
 import styled from "styled-components";
+import {
+  colorBackgroundDefault,
+  colorBackgroundAccent,
+  colorTextAccent,
+  colorTextInvert,
+  colorIconInvert,
+} from "../../designTokens/colorTokens";
+import { textXlHigh200 } from "../../designTokens/tipography";
+import {
+  spacingS,
+  spacingM,
+  spacingL,
+} from "../../designTokens/spacing";
 
 export const Container = styled.header`
   width: 100%;
-  min-height: 96px;
-  background: #ffffff;
+  ${colorBackgroundDefault};
   border-bottom: 1px solid #eeeeee;
 `;
 
@@ -12,8 +24,8 @@ export const Content = styled.div`
   max-width: 1440px;
   margin: 0 auto;
 
-  padding: 0 32px;
-  height: 96px;
+  /* DESKTOP */
+  padding: ${spacingM} ${spacingL}; /* 24px | 32px */
 
   display: flex;
   align-items: center;
@@ -21,9 +33,9 @@ export const Content = styled.div`
 
   contain: layout paint;
 
+  /* MOBILE */
   @media (max-width: 768px) {
-    padding: 24px 16px;
-    height: auto;
+    padding: ${spacingM} ${spacingS}; /* 24px | 16px */
   }
 `;
 
@@ -32,8 +44,8 @@ export const LogoArea = styled.div`
   align-items: center;
 
   img {
-    height: 48px;
     width: 169px;
+    height: 48px;
   }
 
   @media (max-width: 768px) {
@@ -47,7 +59,7 @@ export const LogoArea = styled.div`
 export const NavGroup = styled.div`
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: ${spacingM}; /* 24px */
 
   @media (max-width: 768px) {
     display: none;
@@ -61,19 +73,16 @@ export const ButtonBase = styled.button`
 
   height: 48px;
   padding: 10px 32px;
-
   gap: 8px;
 
-  background: #ffffff;
-  color: #018762;
-
-  font-size: 18px;
-  font-weight: 700;
+  ${colorBackgroundDefault};
+  ${colorTextAccent};
+  ${textXlHigh200};
 
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background 0.2s;
 
   &:hover {
     background: #f3fdfb;
@@ -81,8 +90,8 @@ export const ButtonBase = styled.button`
 `;
 
 export const ButtonPrimary = styled(ButtonBase)`
-  background: #018762;
-  color: #ffffff;
+  ${colorBackgroundAccent};
+  ${colorTextInvert};
 `;
 
 export const MobileButtons = styled.div`
@@ -91,7 +100,7 @@ export const MobileButtons = styled.div`
   @media (max-width: 768px) {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: ${spacingM}; /* 24px */
   }
 `;
 
@@ -103,9 +112,11 @@ export const HelpButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  background: #ffffff;
-  color: #018762;
+  ${colorBackgroundDefault};
+  ${colorTextAccent};
 
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
 `;
 
@@ -117,17 +128,10 @@ export const LoginIconButton = styled.button`
   align-items: center;
   justify-content: center;
 
-  background: #018762;
-  color: white;
+  ${colorBackgroundAccent};
+  ${colorIconInvert};
 
   border-radius: 8px;
   border: none;
-
   cursor: pointer;
 `;
-
-
-
-
-
-

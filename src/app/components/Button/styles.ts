@@ -1,18 +1,27 @@
 import styled, { css } from "styled-components";
+import {
+  colorBackgroundAccent,
+  colorBackgroundSuccess,
+  colorBackgroundDefault,
+  colorBorderHover
+}
+  from "../../designTokens/colorTokens";
+import {
+  colorTextAccent,
+  colorTextInvert
+} from "../../designTokens/colorTokens";
+import { textXlHigh200 } from "../../designTokens/tipography";
 
 export const StyledButton = styled.button<{ variant: "solid" | "outline" }>`
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   height: 48px;
   padding: 10px 32px;
 
   border-radius: 8px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
+  ${textXlHigh200}
 
   vertical-align: middle;
   cursor: pointer;
@@ -22,13 +31,13 @@ export const StyledButton = styled.button<{ variant: "solid" | "outline" }>`
   ${({ variant }) =>
     variant === "solid" &&
     css`
-      background: #018762;
-      color: #ffffff;
+      ${colorBackgroundAccent}
+      ${colorTextInvert}
       border: 2px solid transparent;
       box-shadow: 0px 8px 16px rgba(1, 135, 98, 0.25);
 
       &:hover {
-        background: #017256;
+        ${colorBackgroundAccent}
       }
     `}
 
@@ -36,12 +45,12 @@ export const StyledButton = styled.button<{ variant: "solid" | "outline" }>`
   ${({ variant }) =>
     variant === "outline" &&
     css`
-      background: #ffffff;
-      color: #018762;
-      border: 2px solid #018762;
+      ${colorBackgroundDefault};
+      ${colorTextAccent};
+      border: 2px solid ${colorBorderHover};
 
       &:hover {
-        background: #f3fdfb;
+        ${colorBackgroundSuccess};
       }
     `}
 `;

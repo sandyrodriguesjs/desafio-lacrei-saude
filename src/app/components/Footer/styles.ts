@@ -1,25 +1,39 @@
 import styled from "styled-components";
+import { textBase } from "../../designTokens/tipography";
+import { textXs } from "../../designTokens/tipography";
+import { colorBorderDivider, colorIconAccent } from "../../designTokens/colorTokens";
+import { colors }  from "../../designTokens/colors";
+import { colorBackgroundDefault } from "../../designTokens/colorTokens";
+import { colorBorderHover } from "../../designTokens/colorTokens";
+import { fontPrimary } from "../../designTokens/fonts";
+import { spacingLayoutL } from "../../designTokens/spacing";
+import 
+{ 
+  spacingS, 
+  spacingL, 
+  spacingM 
+} from "../../designTokens/spacing";
 
 export const Container = styled.footer`
   width: 100%;
   min-height: 280px;
-  background: #ffffff;
+  ${colorBackgroundDefault};
   border-top: 1px solid #e0e0e0;
 `;
 
 export const Content = styled.div`
   max-width: 1440px;
   margin: 0 auto;
-  padding: 32px;
+  padding: ${spacingLayoutL};
 
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: ${spacingL};
 
   contain: layout paint;
 
   @media (max-width: 768px) {
-    gap: 24px;
+    gap: ${spacingM};
   }
 `;
 
@@ -31,23 +45,24 @@ export const TopRow = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: ${spacingM};
   }
 `;
 
 export const Links = styled.nav`
   display: flex;
-  gap: 32px;
+  gap: ${spacingM};
 
   a {
-    font-size: 16px;
-    color: #2d2d2d;
+    ${fontPrimary}
+    ${textBase};
+    color: ${colors.gray70};
     text-decoration: none;
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 16px;
+    gap: ${spacingS}
   }
 `;
 
@@ -55,8 +70,9 @@ const BaseBackToTop = styled.button`
   width: 48px;
   height: 48px;
   border-radius: 8px;
-  border: 1px solid #018762;
-  background: #ffffff;
+  border: 1px solid ${colorBorderHover};
+  ${colorBackgroundDefault};
+  box-shadow: 0px 8px 10px #0000004D;
 
   display: flex;
   align-items: center;
@@ -93,13 +109,13 @@ export const SocialRow = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 16px;
+    gap: ${spacingS}
   }
 `;
 
 export const SocialIcons = styled.div`
   display: flex;
-  gap: 16px;
+  gap: ${spacingS};
 `;
 
 export const SocialButton = styled.button`
@@ -109,6 +125,7 @@ export const SocialButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${colorIconAccent};
 
   background: none;
   border: none;
@@ -116,8 +133,8 @@ export const SocialButton = styled.button`
 `;
 
 export const LegalText = styled.p`
-  font-size: 14px;
-  color: #2d2d2d;
+  ${textXs};
+  color: ${colors.gray70};
 
   &.desktop-only {
     position: absolute;
@@ -143,5 +160,6 @@ export const SocialAndCnpjRow = styled.div`
 export const Divider = styled.div`
   width: 100%;
   height: 1px;
-  background: #e0e0e0;
+  strok: 1px;
+  border: solid 1px ${colorBorderDivider}
 `;

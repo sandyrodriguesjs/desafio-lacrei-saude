@@ -1,18 +1,24 @@
 import styled from "styled-components";
+import {
+  spacingLayoutL,
+  spacingLayoutXl,
+  spacingL,
+  spacingM,
+} from "../../designTokens/spacing";
+import { colorBackgroundDefault, colorTextHeading } from "../../designTokens/colorTokens";
 
 export const BackgroundWrapper = styled.section`
   width: 100%;
   min-height: 80vh;
 
-  background: #ffffff; 
+  ${colorBackgroundDefault};
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 64px 96px;
+  padding: ${spacingLayoutL} ${spacingLayoutXl};
 
-  /* Garantir que a área da imagem reserve espaço e não provoque CLS */
   & > img,
   & > span {
     display: block;
@@ -24,7 +30,8 @@ export const BackgroundWrapper = styled.section`
 
   @media (max-width: 900px) {
     flex-direction: column;
-    padding: 32px 24px;
+
+    padding: ${spacingL} ${spacingM};
     text-align: center;
 
     & > img,
@@ -33,18 +40,18 @@ export const BackgroundWrapper = styled.section`
       width: 100%;
       min-width: 0;
       height: auto;
-      margin-top: 24px;
+      margin-top: ${spacingM};
     }
   }
 `;
 
-
 export const MainContainer = styled.div`
   max-width: 520px;
   flex: 0 1 520px;
+
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: ${spacingM};
 
   @media (max-width: 900px) {
     align-items: center;
@@ -55,7 +62,7 @@ export const Title = styled.h1`
   font-size: 48px;
   line-height: 56px;
   font-weight: 700;
-  color: #2d2d2d;
+  ${colorTextHeading};
 
   @media (max-width: 900px) {
     font-size: 36px;
@@ -77,11 +84,10 @@ export const Description = styled.p`
 
 export const ButtonsRow = styled.div`
   display: flex;
-  gap: 24px;
+  gap: ${spacingM};
 
   @media (max-width: 900px) {
     flex-direction: column;
     width: 100%;
   }
 `;
-

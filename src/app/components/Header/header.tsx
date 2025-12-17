@@ -48,7 +48,7 @@ function HeaderComponent() {
           </Link>
 
           <ButtonPrimary>
-            <User size={18} /> Entrar
+            Entrar <User size={24} />
           </ButtonPrimary>
         </NavGroup>
 

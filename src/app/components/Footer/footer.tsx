@@ -27,6 +27,7 @@ function FooterComponent() {
   return (
     <Container>
       <Content>
+        <Divider />
         <TopRow>
           <Image
             src="/LogoFooter.svg"
@@ -57,36 +58,36 @@ function FooterComponent() {
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visitar nosso Facebook"
+              aria-label="facebook site externo - abrirá uma nova janela"
             >
-              <Facebook size={24} color="#018762" />
+              <Facebook size={24} />
             </SocialButton>
 
             <SocialButton as="a"
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visitar nosso Instagram"
+              aria-label="instagram site externo - abrirá uma nova janela"
             >
-              <Instagram size={24} color="#018762" />
+              <Instagram size={24} />
             </SocialButton>
 
             <SocialButton as="a"
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Visitar nosso Linkedin"
+              aria-label="linkedin site externo - abrirá uma nova janela"
             >
-              <Linkedin size={24} color="#018762" />
+              <Linkedin size={24} />
             </SocialButton>
 
             <SocialButton as="a"
               href="https://mail.google.com/mail"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Envie-nos um email"
+              aria-label="e-mail site externo - abrirá uma nova janela com seu e-mail como remetente e a Lacrei saúde como destinatário"
             >
-              <Mail size={24} color="#018762" />
+              <Mail size={24} />
             </SocialButton>
           </SocialIcons>
 
