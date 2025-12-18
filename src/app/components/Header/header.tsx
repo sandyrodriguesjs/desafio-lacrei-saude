@@ -22,7 +22,6 @@ function HeaderComponent() {
   return (
     <Container as="header" role="banner">
       <Content>
-       
         <LogoArea>
           <Link href="/" aria-label="Voltar para a página inicial">
             <Image
@@ -36,9 +35,12 @@ function HeaderComponent() {
           </Link>
         </LogoArea>
 
-        <nav aria-label="Navegação principal">
+        <nav
+          aria-label="Navegação principal"
+          style={{ display: "contents" }}
+        >
           <NavGroup>
-            <Link href="/3l/QuemSomos">
+            <Link href="">
               <ButtonBase>Quem somos</ButtonBase>
             </Link>
 
@@ -56,8 +58,10 @@ function HeaderComponent() {
           </NavGroup>
         </nav>
 
-      
-        <nav aria-label="Ações rápidas">
+        <nav
+          aria-label="Ações rápidas"
+          style={{ display: "contents" }}
+        >
           <MobileButtons>
             <HelpButton
               aria-label="Acessar ajuda"
