@@ -19,6 +19,7 @@ export const StyledButton = styled.button<{ variant: "solid" | "outline" }>`
   justify-content: center;
   height: 48px;
   padding: 15px 35px;
+   white-space: nowrap;
 
   border-radius: 8px;
   ${textXlHigh200}
