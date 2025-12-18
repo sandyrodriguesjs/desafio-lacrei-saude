@@ -42,7 +42,6 @@ O Header e o Footer foram implementados com Styled-Components para garantir reut
 * Links institucionais.
 * Ícones sociais com links externos (Facebook, Instagram, Linkedin e E-mail).
 * Botão **“voltar ao topo”** (desktop e mobile).
-* CNPJ exibido corretamente (sem duplicação no mobile).
 
 ### 2. Roteamento (App Router)
 
