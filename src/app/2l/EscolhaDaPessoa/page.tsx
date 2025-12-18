@@ -1,5 +1,8 @@
 "use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import Button from "@components/Button/Button";
 
 import {
   BackgroundWrapper,
@@ -8,34 +11,55 @@ import {
   Description,
   ButtonsRow,
 } from "./styles";
-import Button from "@components/Button/Button";
-import Link from "next/link";
 
 export default function EscolhaDaPessoaPage() {
   return (
-    <>
-      <BackgroundWrapper>
-        <MainContainer>
-          <Title>
-            Junte-se à <br />
-            nossa comunidade
-          </Title>
+    <BackgroundWrapper as="section" aria-labelledby="escolha-title">
+      <MainContainer>
 
-          <Description>
-            Encontre atendimento clínico de qualidade ou entre para o time de
-            profissionais da Lacrei Saúde.
-          </Description>
+        <Title id="escolha-title">
+          Junte-se à nossa comunidade
+        </Title>
 
+     
+        <Description>
+          Encontre atendimento clínico de qualidade ou entre para o time de
+          profissionais da Lacrei Saúde.
+        </Description>
+
+        <nav aria-label="Escolha do tipo de usuário">
           <ButtonsRow>
-            <Link href="https://paciente.lacreisaude.com.br" passHref>
-              <Button variant="solid" aria-label="Ir para a página de buscar atendimento - opção para pacientes">Buscar atendimento</Button>
+            <Link
+              href="https://paciente.lacreisaude.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="solid"
+                aria-label="Buscar atendimento clínico como paciente"
+              >
+                Buscar atendimento
+              </Button>
             </Link>
-            <Link href="https://paciente.lacreisaude.com.br" passHref>
-              <Button variant="outline" aria-label="Ir para a página de buscar atendimento - opção para profissionais">Oferecer atendimento</Button>
+
+            <Link
+              href="https://paciente.lacreisaude.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                aria-label="Oferecer atendimento como profissional de saúde"
+              >
+                Oferecer atendimento
+              </Button>
             </Link>
           </ButtonsRow>
-        </MainContainer>
+        </nav>
+      </MainContainer>
 
+     
+      <figure aria-hidden="true">
         <Image
           src="/Escolha-da-Pessoa.webp"
           alt="Profissionais de saúde"
@@ -48,11 +72,10 @@ export default function EscolhaDaPessoaPage() {
           quality={70}
           style={{
             objectFit: "cover",
-            display: "block"
+            display: "block",
           }}
         />
-
-      </BackgroundWrapper>
-    </>
+      </figure>
+    </BackgroundWrapper>
   );
 }

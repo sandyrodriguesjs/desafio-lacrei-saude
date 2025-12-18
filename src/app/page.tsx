@@ -25,7 +25,7 @@ const ButtonSkeleton = () => (
   />
 );
 
-// Dynamic import FORA do componente
+
 const Button = dynamic(() => import("@components/Button/Button"), {
   ssr: true,
   loading: () => <ButtonSkeleton />,
@@ -33,39 +33,40 @@ const Button = dynamic(() => import("@components/Button/Button"), {
 
 export default function Home() {
   return (
-    <BackgroundWrapper role="main">
+    <BackgroundWrapper>
       <MainContainer>
-        <Title>
-          Olá, você está <br />
-          na Lacrei Saúde!
-        </Title>
+      
+        <Title>Olá, você está na Lacrei Saúde!</Title>
 
+       
         <Description>
-          Conectamos pessoas <strong>LGBTQIAPN+</strong>
-          <br />
-          com profissionais de saúde qualificados, proporcionando experiências
-          de cuidado seguras e inclusivas.
+          Conectamos pessoas <strong>LGBTQIAPN+</strong> com profissionais de
+          saúde qualificados, proporcionando experiências de cuidado seguras e
+          inclusivas.
         </Description>
 
-        <ButtonsRow>
-          <Link href="/2l/EscolhaDaPessoa">
-            <Button
-              variant="solid"
-              aria-label="Ir para a página de escolha para pacientes"
-            >
-              Para pacientes
-            </Button>
-          </Link>
+        
+        <nav aria-label="Ações principais">
+          <ButtonsRow>
+            <Link href="/2l/EscolhaDaPessoa">
+              <Button
+                variant="solid"
+                aria-label="Ir para a página de escolha para pacientes"
+              >
+                Para pacientes
+              </Button>
+            </Link>
 
-          <Link href="/2l/EscolhaDaPessoa">
-            <Button
-              variant="solid"
-              aria-label="Ir para a página de escolha para profissionais"
-            >
-              Para profissionais
-            </Button>
-          </Link>
-        </ButtonsRow>
+            <Link href="/2l/EscolhaDaPessoa">
+              <Button
+                variant="solid"
+                aria-label="Ir para a página de escolha para profissionais"
+              >
+                Para profissionais
+              </Button>
+            </Link>
+          </ButtonsRow>
+        </nav>
       </MainContainer>
     </BackgroundWrapper>
   );

@@ -20,8 +20,9 @@ import { User, HelpCircle } from "lucide-react";
 
 function HeaderComponent() {
   return (
-    <Container>
+    <Container as="header" role="banner">
       <Content>
+       
         <LogoArea>
           <Link href="/" aria-label="Voltar para a página inicial">
             <Image
@@ -29,40 +30,49 @@ function HeaderComponent() {
               width={169}
               height={48}
               alt="Lacrei Saúde"
-              priority={false}
               loading="eager"
               decoding="async"
             />
           </Link>
         </LogoArea>
 
-        <NavGroup>
-          <Link href="">
-            <ButtonBase>Quem somos</ButtonBase>
-          </Link>
+        <nav aria-label="Navegação principal">
+          <NavGroup>
+            <Link href="/3l/QuemSomos">
+              <ButtonBase>Quem somos</ButtonBase>
+            </Link>
 
-          <Link
-            href="https://lacreisaude.com.br/ajuda/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ButtonBase>Ajuda</ButtonBase>
-          </Link>
+            <Link
+              href="https://lacreisaude.com.br/ajuda/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ButtonBase>Ajuda</ButtonBase>
+            </Link>
 
-          <ButtonPrimary>
-            Entrar <User size={24} />
-          </ButtonPrimary>
-        </NavGroup>
+            <ButtonPrimary aria-label="Entrar na plataforma">
+              Entrar <User size={24} aria-hidden="true" />
+            </ButtonPrimary>
+          </NavGroup>
+        </nav>
 
-        <MobileButtons>
-          <HelpButton aria-label="ajuda">
-            <HelpCircle size={24} />
-          </HelpButton>
+      
+        <nav aria-label="Ações rápidas">
+          <MobileButtons>
+            <HelpButton
+              aria-label="Acessar ajuda"
+              onClick={() =>
+                window.open("https://lacreisaude.com.br/ajuda/", "_blank")
+              }
+            >
+              <HelpCircle size={24} aria-hidden="true" />
+            </HelpButton>
 
-          <LoginIconButton aria-label="entrar">
-            <User size={24} />
-          </LoginIconButton>
-        </MobileButtons>
+            <LoginIconButton aria-label="Entrar na plataforma">
+              <User size={24} aria-hidden="true" />
+            </LoginIconButton>
+          </MobileButtons>
+        </nav>
       </Content>
     </Container>
   );

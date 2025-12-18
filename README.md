@@ -52,7 +52,6 @@ O projeto utiliza o sistema de rotas do Next.js baseado em pastas dentro de `src
 | :--- | :--- |
 | Página Inicial (Home) | `/` |
 | Escolha da Pessoa | `/2l/EscolhaDaPessoa` |
-| Quem Somos | `/3l/QuemSomos` |
 
 ### 3. Botões Reutilizáveis
 
@@ -84,8 +83,6 @@ Foram aplicados atributos ARIA quando necessário para melhorar navegação e en
 * **Página Escolha da Pessoa** com layout de texto + imagem ao lado.
 <img src="./public/PaginaEscolhadaPessoa.png" width="400" alt="Escolha da Pessoa"/>
 
-* **Página Quem Somos** com texto institucional + imagem em destaque.
-<img src="./public/PaginaQuemSomos.png" width="400" alt="Quem Somos"/>
 
 ### Versão Mobile
 
@@ -109,9 +106,6 @@ Foram aplicados atributos ARIA quando necessário para melhorar navegação e en
 
 * **Página Escolha da Pessoa** 
 <img src="./public/PerformaceEscolhadaPessoa.png" width="400" alt="Escolha da Pessoa"/>
-
-* **Página Quem Somos** 
-<img src="./public/PerformaceQuemSomos.png" width="400" alt="Quem Somos"/>
 
 ---
 
@@ -152,16 +146,30 @@ npm test
 ---
 
 ## Cobertura de Testes Implementadas
+Esta base inclui actuellement testes de unidade essenciais cobrindo Header, Footer e a página inicial.
 
-* Testes do Header (renderização e links principais).
-* Testes do Footer (renderização e estrutura).
-* Testes da Página Inicial (Home) verificando:
+- `src/app/components/Header/header.test.tsx`
+    - Verifica que o `Header` é renderizado e que clicar no logo aciona navegação para `/`.
 
-    * Renderização do conteúdo principal
+- `src/app/components/Footer/footer.test.tsx`
+    - Verifica que o botão “Voltar ao topo” existe e que ao ser clicado chama `window.scrollTo` com `{ top: 0, behavior: "smooth" }`.
 
-    * Funcionamento dos botões “Para pacientes” e “Para profissionais”
+- `src/app/page.test.tsx`
+    - Testa a página `Home` (renderização) e navegação: clicar nos botões `Para pacientes` e `Para profissionais` dispara `router.push("/2l/EscolhaDaPessoa")`.
 
-    * Redirecionamento correto para a página Escolha da Pessoa
+Comandos úteis para execução:
+
+```bash
+npm test
+
+
+npx jest src/app/components/Footer/footer.test.tsx
+
+
+npx jest -t "Voltar ao topo da página"
+
+npx jest --coverage
+```
  --- 
 
 
@@ -184,6 +192,37 @@ Em caso de falhas após um deploy em produção, o rollback pode ser realizado d
 2. Navegar até a aba **Deployments**.
 3. Selecionar um **deploy anterior estável**.
 4. Promovê-lo novamente para produção com um clique.
+
+
+## Rollback via GitHub (Controle de Versão)
+
+### Abordagem Recomendada — Reversão de Commit
+
+Indicada quando um commit específico causou erro.
+
+#### Passos:
+```bash
+git log --oneline
+git revert <hash-do-commit>
+git push origin main
+```
+
+---
+
+### Abordagem Alternativa — Reset para Versão Estável
+
+Indicada quando é necessário retornar o projeto a um estado anterior conhecido.
+
+
+
+#### Passos:
+```bash
+git log --oneline
+git reset --hard <hash-do-commit-estavel>
+git push --force origin main
+```
+
+---
 
 
 
